@@ -64,7 +64,7 @@ export default {
   align-items: center;
   box-sizing: border-box;
   position: relative;
-  right: calc(5vw + 10%);
+  right: calc(10vw + 10%);
 }
 
 .firstSection_right .mainBox .mainBox_content {
@@ -105,7 +105,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  right: calc(5vw + 10%);
+  right: calc(10vw + 10%);
   text-align: center;
   font-weight: 600;
   font-size: 31px;

@@ -59,7 +59,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  left: calc(10%);
+  left: 10vw;
 }
 
 .twoSection_left .mainBox .mainBox_content {

@@ -50,7 +50,7 @@ export default {
 .threeSection {
   width: 100%;
   height: auto;
-  padding: 10vh 5vw;
+  padding: 10vh 10vw;
   box-sizing: border-box;
   display: grid;
   grid-template-areas: "left right";

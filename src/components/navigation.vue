@@ -29,7 +29,7 @@ nav {
   display: flex;
   width: 100vw;
   height: 80px;
-  padding: 0% 5vw;
+  padding: 0% 10vw;
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;

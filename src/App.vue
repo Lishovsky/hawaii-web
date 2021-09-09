@@ -2,6 +2,7 @@
   <div id="app">
     <navigation></navigation>
     <router-view />
+    <div id="test"></div>
   </div>
 </template>
 
@@ -24,6 +25,7 @@ body {
 
 #app {
   width: 100vw;
+  overflow: hidden;
   box-sizing: border-box;
 }
 </style>
