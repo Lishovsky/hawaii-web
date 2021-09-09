@@ -1,32 +1,64 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <nav>
+      <div class="nav_leftBox">
+        <img src="./assets/img/logo.svg" alt="brandlogo" />
+      </div>
+      <div class="nav_rightBox">
+        <router-link to="/">Hawaii</router-link>
+        <router-link to="/about">Opalanie natryskowe</router-link>
+        <router-link to="/pierwsza-wizyta">Pierwsza wizyta</router-link>
+        <router-link to="/zarezerwuj-wizyte">zarezerwuj wizytę</router-link>
+        <router-link to="/cennik">Cennik</router-link>
+        <router-link to="/kontakt">Kontakt</router-link>
+      </div>
+    </nav>
+    <router-view />
   </div>
 </template>
 
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-#nav {
-  padding: 30px;
+nav {
+  display: flex;
+  width: 100vw;
+  height: 80px;
+  padding: 0% 5vw;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 9px 15px -11px rgba(0, 0, 0, 0.27);
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.nav_leftBox {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.nav_leftBox img {
+  /* position: relative;
+  bottom: 3px; */
+  height: 70%;
+}
+
+.nav_rightBox a {
+  margin-left: 40px;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+  /* position: relative;
+  bottom: 3px; */
 }
 </style>
