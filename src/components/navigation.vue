@@ -1,7 +1,9 @@
 <template>
   <nav>
     <div class="nav_leftBox">
-      <img src="../assets/img/logo.svg" alt="brandlogo" />
+      <router-link to="/"
+        ><img src="../assets/img/logo.svg" alt="brandlogo"
+      /></router-link>
     </div>
     <div class="nav_rightBox">
       <router-link to="/">Hawaii</router-link>
@@ -34,19 +36,18 @@ nav {
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid #dd9961;
-  /* box-shadow: 1px 9px 15px -11px rgba(0, 0, 0, 0.27); */
 }
 
 .nav_leftBox {
   height: 100%;
-  width: auto;
+}
+
+.nav_leftBox a {
+  height: 100%;
   display: flex;
   align-items: center;
 }
-
 .nav_leftBox img {
-  /* position: relative;
-  bottom: 3px; */
   height: 70%;
 }
 
@@ -60,6 +61,7 @@ nav {
   font-weight: 700;
   position: relative;
   transition: 300ms;
+  overflow: hidden;
 }
 
 .nav_rightBox a:first-child::before {
