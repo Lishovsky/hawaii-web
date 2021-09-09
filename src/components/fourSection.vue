@@ -70,7 +70,7 @@ export default {
   height: 3px;
   z-index: 1;
 }
-yar .fourSection .galery .galeryItem::before {
+.fourSection .galery .galeryItem::before {
   left: 0;
   top: 0;
   transform: translateX(-100%);
