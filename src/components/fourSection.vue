@@ -2,10 +2,18 @@
   <section class="fourSection">
     <h2>Galeria zdjęć</h2>
     <div class="galery">
-      <div class="galeryItem"></div>
-      <div class="galeryItem"></div>
-      <div class="galeryItem"></div>
-      <div class="galeryItem"></div>
+      <div class="galeryItem">
+        <img src="../assets/img/gallery/1/1.jpeg" alt="opalanie" />
+      </div>
+      <div class="galeryItem">
+        <img src="../assets/img/gallery/1/2.jpeg" alt="opalanie" />
+      </div>
+      <div class="galeryItem">
+        <img src="../assets/img/gallery/1/3.jpeg" alt="opalanie" />
+      </div>
+      <div class="galeryItem">
+        <img src="../assets/img/gallery/1/4.jpeg" alt="opalanie" />
+      </div>
     </div>
     <div class="circle">
       <div class="circleItem activeCircle"></div>
@@ -59,6 +67,11 @@ export default {
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  border: 1px solid #cf9d75;
+}
+
+.fourSection .galery .galeryItem img {
+  width: 100%;
 }
 
 .fourSection .galery .galeryItem::before,

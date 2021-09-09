@@ -7,8 +7,8 @@
       <router-link to="/">Hawaii</router-link>
       <router-link to="/about">Opalanie natryskowe</router-link>
       <router-link to="/pierwsza-wizyta">Pierwsza wizyta</router-link>
-      <router-link to="/zarezerwuj-wizyte">zarezerwuj wizytę</router-link>
       <router-link to="/cennik">Cennik</router-link>
+      <router-link to="/zarezerwuj-wizyte">zarezerwuj wizytę</router-link>
       <router-link to="/kontakt">Kontakt</router-link>
     </div>
   </nav>
@@ -33,7 +33,8 @@ nav {
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 1px 9px 15px -11px rgba(0, 0, 0, 0.27);
+  border-bottom: 2px solid #dd9961;
+  /* box-shadow: 1px 9px 15px -11px rgba(0, 0, 0, 0.27); */
 }
 
 .nav_leftBox {
@@ -50,13 +51,46 @@ nav {
 }
 
 .nav_rightBox a {
+  overflow: hidden;
   margin-left: 40px;
   text-transform: uppercase;
   font-size: 14px;
   text-decoration: none;
   color: #000;
   font-weight: 700;
-  /* position: relative;
-  bottom: 3px; */
+  position: relative;
+  transition: 300ms;
+}
+
+.nav_rightBox a:first-child::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #dd9961;
+  transform: translateX(-100%);
+  transition: 300ms;
+}
+
+.nav_rightBox a:first-child::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #dd9961;
+  transform: translateX(100%);
+  transition: 300ms;
+}
+
+.nav_rightBox a:first-child:hover::before {
+  transform: translateX(100%);
+}
+
+.nav_rightBox a:first-child:hover::after {
+  transform: translateX(-100%);
 }
 </style>

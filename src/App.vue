@@ -2,15 +2,22 @@
   <div id="app">
     <navigation></navigation>
     <router-view />
-    <div id="test"></div>
+    <reserved></reserved>
+    <contact></contact>
+    <googleMaps></googleMaps>
+    <footerComponent></footerComponent>
   </div>
 </template>
 
 <script>
 import navigation from "./components/navigation.vue";
+import reserved from "./components/reserved.vue";
+import contact from "./components/contact.vue";
+import googleMaps from "./components/googleMaps.vue";
+import footerComponent from "./components/footerComponent.vue";
 
 export default {
-  components: { navigation },
+  components: { navigation, reserved, contact, googleMaps, footerComponent },
 };
 </script>
 
