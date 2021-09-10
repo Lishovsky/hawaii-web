@@ -52,7 +52,6 @@ nav {
 }
 
 .nav_rightBox a {
-  overflow: hidden;
   margin-left: 40px;
   text-transform: uppercase;
   font-size: 14px;
@@ -61,10 +60,9 @@ nav {
   font-weight: 700;
   position: relative;
   transition: 300ms;
-  overflow: hidden;
 }
 
-.nav_rightBox a:first-child::before {
+.nav_rightBox a::before {
   position: absolute;
   content: "";
   top: -10px;
@@ -72,11 +70,12 @@ nav {
   width: 100%;
   height: 2px;
   background: #dd9961;
-  transform: translateX(-100%);
-  transition: 300ms;
+  transform: translateY(100%);
+  transition: 600ms;
+  opacity: 0;
 }
 
-.nav_rightBox a:first-child::after {
+.nav_rightBox a::after {
   position: absolute;
   content: "";
   bottom: -10px;
@@ -84,15 +83,18 @@ nav {
   width: 100%;
   height: 2px;
   background: #dd9961;
-  transform: translateX(100%);
-  transition: 300ms;
+  transform: translateY(-100%);
+  transition: 600ms;
+  opacity: 0;
 }
 
-.nav_rightBox a:first-child:hover::before {
-  transform: translateX(100%);
+.nav_rightBox a:hover::before {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
-.nav_rightBox a:first-child:hover::after {
-  transform: translateX(-100%);
+.nav_rightBox a:hover::after {
+  transform: translateY(0%);
+  opacity: 1;
 }
 </style>
