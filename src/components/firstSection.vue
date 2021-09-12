@@ -114,4 +114,76 @@ export default {
 .firstSection_right .mainBox_description span {
   color: #cf9d75;
 }
+
+@media only screen and (max-width: 1140px) {
+  .firstSection {
+    grid-template-areas: "left" "right";
+    grid-template-rows: 0vh 100vh;
+    grid-template-columns: 1fr;
+  }
+
+  .firstSection_left {
+    /* background-attachment: fixed;
+    background-position: 40%; */
+    display: none;
+  }
+
+  .firstSection_right .mainBox .mainBox_content {
+    height: 20vh;
+    border: 3px solid #fff;
+  }
+
+  .firstSection_right {
+    max-width: 100vw;
+    box-sizing: border-box;
+    background: none;
+    background-image: url("../assets/img/onesec.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-attachment: fixed;
+  }
+
+  .firstSection_right .mainBox {
+    right: 0;
+    width: 80vw;
+    min-height: 25.5vh;
+    padding: 0;
+    margin: 2vh auto;
+    position: relative;
+    bottom: 8vh;
+  }
+
+  .firstSection_right .mainBox .mainBox_content h2 {
+    font-size: 35px !important;
+    position: relative;
+    top: 0px;
+    margin: 0 !important;
+  }
+
+  .firstSection_right .mainBox .mainBox_content h3 {
+    font-size: 25px;
+    font-weight: 400;
+    position: relative;
+    bottom: 5px;
+  }
+
+  .firstSection_right .mainBox_description {
+    margin-top: 5vh;
+    background: #fff0e3;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    right: 0;
+    text-align: center;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 5vw;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 8vh;
+  }
+}
 </style>

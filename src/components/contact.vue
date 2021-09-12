@@ -101,4 +101,45 @@ export default {
 .contact .contactBox .contactBox_item h4 {
   font-weight: 600;
 }
+@media only screen and (max-width: 1392px) {
+  .contact .contactBox .contactBox_item h3,
+  .contact .contactBox .contactBox_item h4 {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 1291px) {
+  .contact .contactBox {
+    flex-wrap: wrap;
+  }
+
+  .contact .contactBox .contactBox_item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1291px) {
+  .contact {
+    padding: 10vh 5vw;
+  }
+  .contact .contactBox .contactBox_item .image {
+    height: 70px;
+    margin: 3vh 0 0px 0;
+  }
+
+  .contact .contactBox .contactBox_item {
+    height: 20vh;
+    padding: 3vh 0%;
+  }
+
+  .contact .contactBox .contactBox_item .image img {
+    height: 50%;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .contact .contactBox .contactBox_item {
+    width: 100%;
+  }
+}
 </style>

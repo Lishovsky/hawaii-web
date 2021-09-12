@@ -78,4 +78,42 @@ export default {
   text-transform: uppercase;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 1194px) {
+  .threeSection {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh 10vw;
+  }
+}
+
+@media only screen and (max-width: 483px) {
+  .threeSection_box_item p {
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 13.5px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .threeSection {
+    padding: 4vh 10vw;
+  }
+
+  .threeSection_box_item {
+    margin-top: 3vh;
+  }
+
+  .threeSection_box_item p {
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-size: 13.5px;
+  }
+
+  .threeSection_box_item img {
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}
 </style>

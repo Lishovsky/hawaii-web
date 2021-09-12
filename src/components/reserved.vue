@@ -29,6 +29,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 10vw;
+  box-sizing: border-box;
 }
 
 .sectionSix .sectionSix_bgColor button {
@@ -49,5 +51,25 @@ export default {
   color: #dd9961;
   border-color: #dd9961;
   background: #dd996128;
+}
+
+@media only screen and (max-width: 840px) {
+  .sectionSix .sectionSix_bgColor button {
+    font-size: 25px;
+    border: 5px solid #fff;
+  }
+
+  .sectionSix {
+    height: 50vh;
+    background-position: 40%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .sectionSix .sectionSix_bgColor button {
+    font-size: 15px;
+    border: 5px solid #fff;
+    padding: 20px;
+  }
 }
 </style>

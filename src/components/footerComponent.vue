@@ -44,4 +44,22 @@ footer .footer_item img {
 footer .footer_item img:hover {
   transform: translateY(-5px);
 }
+
+@media only screen and (max-width: 1060px) {
+  footer {
+    flex-direction: column;
+    padding: 3vh 10vw;
+    text-align: center;
+  }
+
+  .footer_item {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .footer_item p {
+    font-size: 12px;
+  }
+}
 </style>

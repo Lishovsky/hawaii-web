@@ -91,4 +91,62 @@ export default {
   position: relative;
   bottom: 5px;
 }
+
+@media only screen and (max-width: 1140px) {
+  .twoSection {
+    display: flex;
+    height: auto;
+    min-height: 20vh;
+  }
+
+  .twoSection_left {
+    grid-area: left;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    /* padding: 0% 10vw; */
+    box-sizing: border-box;
+  }
+
+  .twoSection_right {
+    display: none;
+  }
+
+  .twoSection_left .mainBox {
+    background: #cf9d75;
+    width: 100%;
+    padding: 0% 10vw;
+    box-sizing: border-box;
+    min-height: 40vh;
+    left: 0;
+  }
+
+  .twoSection_left .mainBox .mainBox_content {
+    height: auto;
+    width: 100%;
+    border: 3px solid #fff;
+    padding: 15px 10vw;
+  }
+
+  .twoSection_left .mainBox .mainBox_content h2,
+  .twoSection_left .mainBox .mainBox_content h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .twoSection_left .mainBox .mainBox_content h2 {
+    font-size: 15px;
+    top: 5px;
+    margin: 0vh 0 2vh 0 !important;
+  }
+
+  .twoSection_left .mainBox .mainBox_content h3 {
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    bottom: 5px;
+  }
+}
 </style>

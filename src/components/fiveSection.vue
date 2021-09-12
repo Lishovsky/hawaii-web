@@ -89,4 +89,26 @@ export default {
   height: 37px;
   margin-right: 40px;
 }
+
+@media only screen and (max-width: 520px) {
+  .fiveSection p {
+    font-size: 14px;
+  }
+
+  .fiveSection .content_Box_item .box_item_element img {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .fiveSection p {
+    font-size: 13.5px;
+  }
+
+  .fiveSection .content_Box_item .box_item_element img {
+    margin-right: 20px;
+    height: 20px;
+    width: 20px;
+  }
+}
 </style>

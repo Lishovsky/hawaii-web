@@ -28,11 +28,19 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 #app {
   width: 100vw;
   overflow: hidden;
   box-sizing: border-box;
+}
+
+@media only screen and (max-width: 870px) {
+  body h2 {
+    font-size: 30px !important;
+    margin-bottom: 3vh !important;
+  }
 }
 </style>

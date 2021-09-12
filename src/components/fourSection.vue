@@ -27,6 +27,27 @@
 <script>
 export default {
   name: "fourSection",
+  methods: {
+    // changeGallery() {
+    //   let numberOfGallery = 1;
+    //   const imageOne = document.querySelector(".galeryItem img:nth-child(1)");
+    //   const imageTwo = document.querySelector(".galeryItem img:nth-child(2)");
+    //   const imageThree = document.querySelector(".galeryItem img:nth-child(3)");
+    //   const imageFour = document.querySelector(".galeryItem img:nth-child(4)");
+    // switch (expr) {
+    //   case "Oranges":
+    //     console.log("Oranges are $0.59 a pound.");
+    //     break;
+    //   case "Mangoes":
+    //   case "Papayas":
+    //     console.log("Mangoes and papayas are $2.79 a pound.");
+    //     // expected output: "Mangoes and papayas are $2.79 a pound."
+    //     break;
+    //   default:
+    //     console.log(`Sorry, we are out of ${expr}.`);
+    // }
+    // },
+  },
 };
 </script>
 
