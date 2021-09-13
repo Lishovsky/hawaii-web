@@ -2,7 +2,7 @@
   <section class="fourSection">
     <h2>Galeria zdjęć</h2>
     <div class="galery">
-      <div class="galeryItem">
+      <div @click="echo()" class="galeryItem">
         <img src="../assets/img/gallery/1/1.jpeg" alt="opalanie" />
       </div>
       <div class="galeryItem">
@@ -16,10 +16,10 @@
       </div>
     </div>
     <div class="circle">
-      <div class="circleItem activeCircle"></div>
-      <div class="circleItem"></div>
-      <div class="circleItem"></div>
-      <div class="circleItem"></div>
+      <div @click="firstGallery()" class="circleItem 1"></div>
+      <div @click="firstGallery()" class="circleItem 2"></div>
+      <div @click="firstGallery()" class="circleItem 3"></div>
+      <div @click="firstGallery()" class="circleItem 4"></div>
     </div>
   </section>
 </template>
@@ -28,34 +28,41 @@
 export default {
   name: "fourSection",
   methods: {
-    // changeGallery() {
-    //   let numberOfGallery = 1;
-    //   const imageOne = document.querySelector(".galeryItem img:nth-child(1)");
-    //   const imageTwo = document.querySelector(".galeryItem img:nth-child(2)");
-    //   const imageThree = document.querySelector(".galeryItem img:nth-child(3)");
-    //   const imageFour = document.querySelector(".galeryItem img:nth-child(4)");
-    // switch (expr) {
-    //   case "Oranges":
-    //     console.log("Oranges are $0.59 a pound.");
-    //     break;
-    //   case "Mangoes":
-    //   case "Papayas":
-    //     console.log("Mangoes and papayas are $2.79 a pound.");
-    //     // expected output: "Mangoes and papayas are $2.79 a pound."
-    //     break;
-    //   default:
-    //     console.log(`Sorry, we are out of ${expr}.`);
-    // }
-    // },
+    firstGallery(event) {
+      // const arrayOfCircleItem = document.querySelectorAll(".circleItem");
+      // const arrayFromNodeList = Array.from(arrayOfCircleItem);
+
+      // console.log(arrayFromNodeList);
+      console.log(event.target.className);
+      // for (let u = 0; u < arrayFromNodeList.length; u++) {
+      //   if (event.target.className === `circleItem  ${u}`) {
+      //     this.classList.add("activeCircle");
+      //     console.log("jest taki element");
+      //   } else {
+      //     arrayFromNodeList[u].classList.remove("activeCircle");
+      //     console.log("nie ma takiego elementu");
+      //   }
+      // }
+    },
   },
 };
+
+// if (this.classList.contains(".1")) {
+//   console.log("to jest nr 1");
+// } else if (this.classList.contains(".1")) {
+//   console.log("to jest nr 2");
+// } else if (this.classList.contains(".1")) {
+//   console.log("to jest nr 3");
+// } else {
+//   console.log("to jest ostatnia kropka");
+//   console.log(this);
 </script>
 
 <style>
 .fourSection {
   width: 100%;
   background: #f4f4f4;
-  min-height: 100vh;
+
   padding: 10vh 10vw;
   box-sizing: border-box;
   text-align: center;
@@ -77,7 +84,8 @@ export default {
 .fourSection .galery {
   display: flex;
   justify-content: space-between;
-  margin: 5vh 0%;
+  flex-wrap: wrap;
+  margin: 10vh 0%;
 }
 
 .fourSection .galery .galeryItem {
@@ -148,5 +156,27 @@ export default {
 
 .activeCircle {
   background: #cf9d75;
+}
+
+@media only screen and (max-width: 1140px) {
+  .fourSection .galery .galeryItem {
+    width: calc(100vw / 2 - 11vw);
+    height: calc(100vw / 2 - 11vw);
+    margin-top: 2vw;
+  }
+
+  .fourSection .galery .galeryItem:nth-child(1),
+  .fourSection .galery .galeryItem:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .fourSection h2 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .fourSection .galery {
+    margin: 3vh 0 7vh 0;
+  }
 }
 </style>

@@ -2,7 +2,7 @@
   <div id="app">
     <navigation></navigation>
     <router-view />
-    <reserved></reserved>
+    <reserved id="contact"></reserved>
     <contact></contact>
     <googleMaps></googleMaps>
     <footerComponent></footerComponent>
@@ -23,6 +23,10 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Montserrat", sans-serif;

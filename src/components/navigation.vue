@@ -1,29 +1,58 @@
 <template>
-  <nav>
-    <div class="nav_leftBox">
-      <router-link to="/"
-        ><img src="../assets/img/logo.svg" alt="brandlogo"
-      /></router-link>
-    </div>
-    <div class="nav_rightBox">
-      <router-link to="/">Hawaii</router-link>
-      <router-link to="/opalanie_natryskowe">Opalanie natryskowe</router-link>
-      <router-link to="/pierwsza_wizyta">Pierwsza wizyta</router-link>
-      <router-link to="/cennik">Cennik</router-link>
-      <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link>
-      <a href="#">Kontakt</a>
-    </div>
-    <div class="mobileNavToggler" @click="mobileNavActive()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
+  <header>
+    <nav class="fixedBar">
+      <div class="nav_leftBox">
+        <router-link to="/"
+          ><img src="../assets/img/logo.svg" alt="brandlogo"
+        /></router-link>
+      </div>
+      <div class="nav_rightBox">
+        <router-link to="/">Hawaii</router-link>
+        <router-link to="/opalanie_natryskowe">Opalanie natryskowe</router-link>
+        <router-link to="/pierwsza_wizyta">Pierwsza wizyta</router-link>
+        <router-link to="/cennik">Cennik</router-link>
+        <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link>
+        <a href="#">Kontakt</a>
+      </div>
+      <div class="mobileNavToggler" @click="mobileNavActive()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <nav class="mainNav">
+      <div class="nav_leftBox">
+        <router-link to="/"
+          ><img src="../assets/img/logo.svg" alt="brandlogo"
+        /></router-link>
+      </div>
+      <div class="nav_rightBox">
+        <router-link to="/">Hawaii</router-link>
+        <router-link to="/opalanie_natryskowe">Opalanie natryskowe</router-link>
+        <router-link to="/pierwsza_wizyta">Pierwsza wizyta</router-link>
+        <router-link to="/cennik">Cennik</router-link>
+        <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link>
+        <a href="#contact">Kontakt</a>
+      </div>
+      <div class="mobileNavToggler" @click="mobileNavActive()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
   name: "navigation",
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
   methods: {
     mobileNavActive() {
       document
@@ -38,6 +67,14 @@ export default {
       document
         .querySelector(".nav_rightBox")
         .classList.toggle("mobileNavActive");
+    },
+    handleScroll() {
+      const fixedBar = document.querySelector(".fixedBar");
+      if (window.scrollY > 300) {
+        fixedBar.style.transform = "translateY(0)";
+      } else {
+        fixedBar.style.transform = "translateY(-100%)";
+      }
     },
   },
 };
@@ -58,6 +95,15 @@ nav {
   align-items: center;
   border-bottom: 2px solid #dd9961;
   background: #fff;
+}
+
+.fixedBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  transition: 300ms;
+  transform: translateY(-100%);
 }
 
 .mobileNavToggler {
@@ -192,6 +238,10 @@ nav {
   }
   .activeSpanTwo {
     opacity: 0;
+  }
+
+  .fixedBar {
+    display: none;
   }
 }
 </style>
