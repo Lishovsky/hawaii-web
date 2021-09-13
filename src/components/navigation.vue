@@ -14,11 +14,6 @@
         <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link>
         <a href="#">Kontakt</a>
       </div>
-      <div class="mobileNavToggler" @click="mobileNavActive()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
     </nav>
 
     <nav class="mainNav">
@@ -56,16 +51,16 @@ export default {
   methods: {
     mobileNavActive() {
       document
-        .querySelector(".mobileNavToggler span:nth-child(1)")
+        .querySelector(".mainNav .mobileNavToggler span:nth-child(1)")
         .classList.toggle("activeSpanOne");
       document
-        .querySelector(".mobileNavToggler span:nth-child(2)")
+        .querySelector(".mainNav .mobileNavToggler span:nth-child(2)")
         .classList.toggle("activeSpanTwo");
       document
-        .querySelector(".mobileNavToggler span:nth-child(3)")
+        .querySelector(".mainNav .mobileNavToggler span:nth-child(3)")
         .classList.toggle("activeSpanThree");
       document
-        .querySelector(".nav_rightBox")
+        .querySelector(".mainNav .nav_rightBox")
         .classList.toggle("mobileNavActive");
     },
     handleScroll() {
