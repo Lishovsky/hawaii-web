@@ -65,6 +65,17 @@ export default {
   }
 }
 
+@media only screen and (max-width: 1140px) {
+  .sectionSix {
+    width: 100%;
+    box-sizing: border-box;
+    height: 70vh;
+    background-image: url("../assets/img/reserved.png");
+    background-size: cover;
+    background-attachment: scroll;
+  }
+}
+
 @media only screen and (max-width: 420px) {
   .sectionSix .sectionSix_bgColor button {
     font-size: 15px;

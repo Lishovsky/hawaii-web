@@ -141,7 +141,6 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10% 50%;
-    background-attachment: fixed;
   }
 
   .firstSection_right .mainBox {

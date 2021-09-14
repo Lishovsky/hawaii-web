@@ -33,6 +33,16 @@ export default {
   name: "fourSection",
   methods: {
     firstGallery() {
+      const circleOne = document.querySelector(".circleItem:nth-child(1)");
+      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
+      const circleThree = document.querySelector(".circleItem:nth-child(3)");
+      const circleFour = document.querySelector(".circleItem:nth-child(4)");
+
+      circleOne.classList.add("activeCircle");
+      circleTwo.classList.remove("activeCircle");
+      circleThree.classList.remove("activeCircle");
+      circleFour.classList.remove("activeCircle");
+
       //Animation gallery
       document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
       document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
@@ -44,28 +54,34 @@ export default {
         document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-      }, 300);
-
-      const circleOne = document.querySelector(".circleItem:nth-child(1)");
-      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
-      const circleThree = document.querySelector(".circleItem:nth-child(3)");
-      const circleFour = document.querySelector(".circleItem:nth-child(4)");
-
-      circleOne.classList.add("activeCircle");
-      circleTwo.classList.remove("activeCircle");
-      circleThree.classList.remove("activeCircle");
-      circleFour.classList.remove("activeCircle");
+      }, 500);
 
       setTimeout(function () {
-        document.querySelector("#oneImg").src =
-          "../assets/img/gallery/1/1.jpeg";
-        document.querySelector("#twoImg").src =
-          "../assets/img/gallery/1/2.jpeg";
-        document.querySelector("#threeImg").src =
-          "../assets/img/gallery/1/3.jpeg";
-        document.querySelector("#fourImg").src =
-          "../assets/img/gallery/1/4.jpeg";
-      }, 300);
+        document
+          .querySelector("#oneImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/1.jpeg"
+          );
+        document
+          .querySelector("#twoImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/2.jpeg"
+          );
+        document
+          .querySelector("#threeImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/3.jpeg"
+          );
+        document
+          .querySelector("#fourImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/4.jpeg"
+          );
+      }, 500);
     },
 
     twoGallery() {
@@ -89,22 +105,34 @@ export default {
         document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-      }, 300);
+      }, 500);
 
       setTimeout(function () {
         document
           .querySelector("#oneImg")
-          .setAttribute("src", "../assets/img/gallery/2/1.jpeg");
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/5.jpeg"
+          );
         document
           .querySelector("#twoImg")
-          .setAttribute("src", "../assets/img/gallery/2/2.jpeg");
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/6.jpeg"
+          );
         document
           .querySelector("#threeImg")
-          .setAttribute("src", "../assets/img/gallery/2/3.jpeg");
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/7.jpeg"
+          );
         document
           .querySelector("#fourImg")
-          .setAttribute("src", "../assets/img/gallery/2/4.jpeg");
-      }, 300);
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/8.jpeg"
+          );
+      }, 500);
     },
     threeGallery() {
       const circleOne = document.querySelector(".circleItem:nth-child(1)");
@@ -127,20 +155,32 @@ export default {
         document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-      }, 300);
 
-      document
-        .querySelector("#oneImg")
-        .setAttribute("src", "../assets/img/gallery/3/1.jpeg");
-      document
-        .querySelector("#twoImg")
-        .setAttribute("src", "../assets/img/gallery/3/2.jpeg");
-      document
-        .querySelector("#threeImg")
-        .setAttribute("src", "../assets/img/gallery/3/3.jpeg");
-      document
-        .querySelector("#fourImg")
-        .setAttribute("src", "../assets/img/gallery/3/4.jpeg");
+        document
+          .querySelector("#oneImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/9.jpeg"
+          );
+        document
+          .querySelector("#twoImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/10.jpeg"
+          );
+        document
+          .querySelector("#threeImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/11.jpeg"
+          );
+        document
+          .querySelector("#fourImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/12.jpeg"
+          );
+      }, 500);
     },
     fourGallery() {
       const circleOne = document.querySelector(".circleItem:nth-child(1)");
@@ -163,20 +203,32 @@ export default {
         document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
         document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-      }, 300);
 
-      document
-        .querySelector("#oneImg")
-        .setAttribute("src", "../assets/img/gallery/4/1.jpeg");
-      document
-        .querySelector("#twoImg")
-        .setAttribute("src", "../assets/img/gallery/4/2.jpeg");
-      document
-        .querySelector("#threeImg")
-        .setAttribute("src", "../assets/img/gallery/4/3.jpeg");
-      document
-        .querySelector("#fourImg")
-        .setAttribute("src", "../assets/img/gallery/4/4.jpeg");
+        document
+          .querySelector("#oneImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/13.jpeg"
+          );
+        document
+          .querySelector("#twoImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/14.jpeg"
+          );
+        document
+          .querySelector("#threeImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/15.jpeg"
+          );
+        document
+          .querySelector("#fourImg")
+          .setAttribute(
+            "src",
+            "https://apptest.hawaii-katowice.pl/gallery/1/16.jpeg"
+          );
+      }, 500);
     },
   },
 };
@@ -210,6 +262,7 @@ export default {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 10vh 0%;
+  transition: 500ms;
 }
 
 .fourSection .galery .galeryItem {
@@ -221,7 +274,7 @@ export default {
   overflow: hidden;
   position: relative;
   border: 1px solid #cf9d75;
-  transition: 300ms;
+  transition: 500ms;
 }
 
 .fourSection .galery .galeryItem img {
