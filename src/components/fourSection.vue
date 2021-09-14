@@ -2,24 +2,28 @@
   <section class="fourSection">
     <h2>Galeria zdjęć</h2>
     <div class="galery">
-      <div @click="echo()" class="galeryItem">
-        <img src="../assets/img/gallery/1/1.jpeg" alt="opalanie" />
+      <div class="galeryItem">
+        <img id="oneImg" src="../assets/img/gallery/1/1.jpeg" alt="opalanie" />
       </div>
       <div class="galeryItem">
-        <img src="../assets/img/gallery/1/2.jpeg" alt="opalanie" />
+        <img id="twoImg" src="../assets/img/gallery/1/2.jpeg" alt="opalanie" />
       </div>
       <div class="galeryItem">
-        <img src="../assets/img/gallery/1/3.jpeg" alt="opalanie" />
+        <img
+          id="threeImg"
+          src="../assets/img/gallery/1/3.jpeg"
+          alt="opalanie"
+        />
       </div>
       <div class="galeryItem">
-        <img src="../assets/img/gallery/1/4.jpeg" alt="opalanie" />
+        <img id="fourImg" src="../assets/img/gallery/1/4.jpeg" alt="opalanie" />
       </div>
     </div>
     <div class="circle">
-      <div @click="firstGallery()" class="circleItem 1"></div>
-      <div @click="firstGallery()" class="circleItem 2"></div>
-      <div @click="firstGallery()" class="circleItem 3"></div>
-      <div @click="firstGallery()" class="circleItem 4"></div>
+      <div @click="firstGallery()" class="circleItem 1 activeCircle"></div>
+      <div @click="twoGallery()" class="circleItem 2"></div>
+      <div @click="threeGallery()" class="circleItem 3"></div>
+      <div @click="fourGallery()" class="circleItem 4"></div>
     </div>
   </section>
 </template>
@@ -28,34 +32,154 @@
 export default {
   name: "fourSection",
   methods: {
-    firstGallery(event) {
-      // const arrayOfCircleItem = document.querySelectorAll(".circleItem");
-      // const arrayFromNodeList = Array.from(arrayOfCircleItem);
+    firstGallery() {
+      //Animation gallery
+      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
 
-      // console.log(arrayFromNodeList);
-      console.log(event.target.className);
-      // for (let u = 0; u < arrayFromNodeList.length; u++) {
-      //   if (event.target.className === `circleItem  ${u}`) {
-      //     this.classList.add("activeCircle");
-      //     console.log("jest taki element");
-      //   } else {
-      //     arrayFromNodeList[u].classList.remove("activeCircle");
-      //     console.log("nie ma takiego elementu");
-      //   }
-      // }
+      setTimeout(function () {
+        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
+      }, 300);
+
+      const circleOne = document.querySelector(".circleItem:nth-child(1)");
+      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
+      const circleThree = document.querySelector(".circleItem:nth-child(3)");
+      const circleFour = document.querySelector(".circleItem:nth-child(4)");
+
+      circleOne.classList.add("activeCircle");
+      circleTwo.classList.remove("activeCircle");
+      circleThree.classList.remove("activeCircle");
+      circleFour.classList.remove("activeCircle");
+
+      setTimeout(function () {
+        document.querySelector("#oneImg").src =
+          "../assets/img/gallery/1/1.jpeg";
+        document.querySelector("#twoImg").src =
+          "../assets/img/gallery/1/2.jpeg";
+        document.querySelector("#threeImg").src =
+          "../assets/img/gallery/1/3.jpeg";
+        document.querySelector("#fourImg").src =
+          "../assets/img/gallery/1/4.jpeg";
+      }, 300);
+    },
+
+    twoGallery() {
+      const circleOne = document.querySelector(".circleItem:nth-child(1)");
+      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
+      const circleThree = document.querySelector(".circleItem:nth-child(3)");
+      const circleFour = document.querySelector(".circleItem:nth-child(4)");
+      circleOne.classList.remove("activeCircle");
+      circleTwo.classList.add("activeCircle");
+      circleThree.classList.remove("activeCircle");
+      circleFour.classList.remove("activeCircle");
+
+      //Animation gallery
+      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
+
+      setTimeout(function () {
+        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
+      }, 300);
+
+      setTimeout(function () {
+        document
+          .querySelector("#oneImg")
+          .setAttribute("src", "../assets/img/gallery/2/1.jpeg");
+        document
+          .querySelector("#twoImg")
+          .setAttribute("src", "../assets/img/gallery/2/2.jpeg");
+        document
+          .querySelector("#threeImg")
+          .setAttribute("src", "../assets/img/gallery/2/3.jpeg");
+        document
+          .querySelector("#fourImg")
+          .setAttribute("src", "../assets/img/gallery/2/4.jpeg");
+      }, 300);
+    },
+    threeGallery() {
+      const circleOne = document.querySelector(".circleItem:nth-child(1)");
+      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
+      const circleThree = document.querySelector(".circleItem:nth-child(3)");
+      const circleFour = document.querySelector(".circleItem:nth-child(4)");
+      circleOne.classList.remove("activeCircle");
+      circleTwo.classList.remove("activeCircle");
+      circleThree.classList.add("activeCircle");
+      circleFour.classList.remove("activeCircle");
+
+      //Animation gallery
+      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
+
+      setTimeout(function () {
+        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
+      }, 300);
+
+      document
+        .querySelector("#oneImg")
+        .setAttribute("src", "../assets/img/gallery/3/1.jpeg");
+      document
+        .querySelector("#twoImg")
+        .setAttribute("src", "../assets/img/gallery/3/2.jpeg");
+      document
+        .querySelector("#threeImg")
+        .setAttribute("src", "../assets/img/gallery/3/3.jpeg");
+      document
+        .querySelector("#fourImg")
+        .setAttribute("src", "../assets/img/gallery/3/4.jpeg");
+    },
+    fourGallery() {
+      const circleOne = document.querySelector(".circleItem:nth-child(1)");
+      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
+      const circleThree = document.querySelector(".circleItem:nth-child(3)");
+      const circleFour = document.querySelector(".circleItem:nth-child(4)");
+      circleOne.classList.remove("activeCircle");
+      circleTwo.classList.remove("activeCircle");
+      circleThree.classList.remove("activeCircle");
+      circleFour.classList.add("activeCircle");
+
+      //Animation gallery
+      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
+      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
+
+      setTimeout(function () {
+        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
+        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
+      }, 300);
+
+      document
+        .querySelector("#oneImg")
+        .setAttribute("src", "../assets/img/gallery/4/1.jpeg");
+      document
+        .querySelector("#twoImg")
+        .setAttribute("src", "../assets/img/gallery/4/2.jpeg");
+      document
+        .querySelector("#threeImg")
+        .setAttribute("src", "../assets/img/gallery/4/3.jpeg");
+      document
+        .querySelector("#fourImg")
+        .setAttribute("src", "../assets/img/gallery/4/4.jpeg");
     },
   },
 };
-
-// if (this.classList.contains(".1")) {
-//   console.log("to jest nr 1");
-// } else if (this.classList.contains(".1")) {
-//   console.log("to jest nr 2");
-// } else if (this.classList.contains(".1")) {
-//   console.log("to jest nr 3");
-// } else {
-//   console.log("to jest ostatnia kropka");
-//   console.log(this);
 </script>
 
 <style>
@@ -93,10 +217,11 @@ export default {
   box-sizing: border-box;
   width: calc(100vw / 4 - 7vw);
   height: calc(100vw / 4 - 5vw);
-  cursor: pointer;
+  /* cursor: pointer; */
   overflow: hidden;
   position: relative;
   border: 1px solid #cf9d75;
+  transition: 300ms;
 }
 
 .fourSection .galery .galeryItem img {

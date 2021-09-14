@@ -2,11 +2,19 @@
   <footer>
     <div class="footer_item"><p>ALL RIGHTS RESERVED HAWAII 2021</p></div>
     <div class="footer_item">
-      <a href="#"><img src="../assets/img/facebook.png" alt="fb" /></a>
-      <a href="#"><img src="../assets/img/instagram.png" alt="instagram" /></a>
-      <a href="#"><img src="../assets/img/tiktok.png" alt="tiktok" /></a>
+      <a href="https://www.facebook.com/hawaii.katowice"
+        ><img src="../assets/img/facebook.png" alt="fb"
+      /></a>
+      <a href="https://www.instagram.com/hawaii.katowice/"
+        ><img src="../assets/img/instagram.png" alt="instagram"
+      /></a>
+      <a href="https://vm.tiktok.com/ZMRHEStqR/"
+        ><img src="../assets/img/tiktok.png" alt="tiktok"
+      /></a>
     </div>
-    <div class="footer_item"><p>CREATED BY DOMINIK LISZKA</p></div>
+    <div class="footer_item">
+      <p>CREATED BY<a href="https://www.colorblue.pl/"> DOMINIK LISZKA</a></p>
+    </div>
   </footer>
 </template>
 
@@ -43,6 +51,11 @@ footer .footer_item img {
 
 footer .footer_item img:hover {
   transform: translateY(-5px);
+}
+
+footer .footer_item a {
+  color: #000;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 1060px) {

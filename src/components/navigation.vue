@@ -7,12 +7,20 @@
         /></router-link>
       </div>
       <div class="nav_rightBox">
-        <router-link to="/">Hawaii</router-link>
-        <router-link to="/opalanie_natryskowe">Opalanie natryskowe</router-link>
-        <router-link to="/pierwsza_wizyta">Pierwsza wizyta</router-link>
-        <router-link to="/cennik">Cennik</router-link>
-        <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link>
-        <a href="#">Kontakt</a>
+        <router-link @click="hiddingMobileNav()" to="/">Hawaii</router-link>
+        <router-link @click="hiddingMobileNav()" to="/opalanie_natryskowe"
+          >Opalanie natryskowe</router-link
+        >
+        <router-link @click="hiddingMobileNav()" to="/pierwsza_wizyta"
+          >Pierwsza wizyta</router-link
+        >
+        <router-link @click="hiddingMobileNav()" to="/cennik"
+          >Cennik</router-link
+        >
+        <!-- <router-link @click="hiddingMobileNav()" to="/rezerwacja_wizyty"
+          >zarezerwuj wizytę</router-link
+        > -->
+        <a @click="hiddingMobileNav()" href="#">Kontakt</a>
       </div>
     </nav>
 
@@ -22,12 +30,12 @@
           ><img src="../assets/img/logo.svg" alt="brandlogo"
         /></router-link>
       </div>
-      <div class="nav_rightBox">
+      <div @click="hiddingMobileNav()" class="nav_rightBox">
         <router-link to="/">Hawaii</router-link>
         <router-link to="/opalanie_natryskowe">Opalanie natryskowe</router-link>
         <router-link to="/pierwsza_wizyta">Pierwsza wizyta</router-link>
         <router-link to="/cennik">Cennik</router-link>
-        <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link>
+        <!-- <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link> -->
         <a href="#contact">Kontakt</a>
       </div>
       <div class="mobileNavToggler" @click="mobileNavActive()">
@@ -62,6 +70,21 @@ export default {
       document
         .querySelector(".mainNav .nav_rightBox")
         .classList.toggle("mobileNavActive");
+    },
+    hiddingMobileNav() {
+      const navbarMobile = document.querySelector(".mainNav .nav_rightBox");
+      if (navbarMobile.classList.contains("mobileNavActive")) {
+        navbarMobile.classList.remove("mobileNavActive");
+        document
+          .querySelector(".mainNav .mobileNavToggler span:nth-child(1)")
+          .classList.remove("activeSpanOne");
+        document
+          .querySelector(".mainNav .mobileNavToggler span:nth-child(2)")
+          .classList.remove("activeSpanTwo");
+        document
+          .querySelector(".mainNav .mobileNavToggler span:nth-child(3)")
+          .classList.remove("activeSpanThree");
+      }
     },
     handleScroll() {
       const fixedBar = document.querySelector(".fixedBar");
