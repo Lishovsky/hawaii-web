@@ -8,10 +8,10 @@
       </div>
       <div class="nav_rightBox">
         <router-link @click="hiddingMobileNav()" to="/">Hawaii</router-link>
-        <router-link @click="hiddingMobileNav()" to="/opalanie_natryskowe"
+        <router-link @click="hiddingMobileNav()" to="/opalanie-natryskowe"
           >Opalanie natryskowe</router-link
         >
-        <router-link @click="hiddingMobileNav()" to="/pierwsza_wizyta"
+        <router-link @click="hiddingMobileNav()" to="/pierwsza-wizyta"
           >Pierwsza wizyta</router-link
         >
         <router-link @click="hiddingMobileNav()" to="/cennik"
@@ -32,8 +32,8 @@
       </div>
       <div @click="hiddingMobileNav()" class="nav_rightBox">
         <router-link to="/">Hawaii</router-link>
-        <router-link to="/opalanie_natryskowe">Opalanie natryskowe</router-link>
-        <router-link to="/pierwsza_wizyta">Pierwsza wizyta</router-link>
+        <router-link to="/opalanie-natryskowe">Opalanie natryskowe</router-link>
+        <router-link to="/pierwsza-wizyta">Pierwsza wizyta</router-link>
         <router-link to="/cennik">Cennik</router-link>
         <!-- <router-link to="/rezerwacja_wizyty">zarezerwuj wizytę</router-link> -->
         <a href="#contact">Kontakt</a>

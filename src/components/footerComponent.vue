@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="footer_item"><p>ALL RIGHTS RESERVED HAWAII 2021</p></div>
+    <div class="footer_item"><p>HAWAII 2021 - ALL RIGHTS RESERVED</p></div>
     <div class="footer_item">
       <a href="https://www.facebook.com/hawaii.katowice"
         ><img src="../assets/img/facebook.png" alt="fb"

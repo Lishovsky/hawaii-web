@@ -102,5 +102,6 @@
 .firstVisit ul li {
   list-style-type: none;
   margin: 15px 0;
+  text-align: left;
 }
 </style>

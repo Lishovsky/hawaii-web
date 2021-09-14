@@ -15,17 +15,17 @@ const routes = [
     component: Home
   },
   {
-    path: '/opalanie_natryskowe',
+    path: '/opalanie-natryskowe',
     name: 'tan',
     component: tan
   },
   {
-    path: '/pierwsza_wizyta',
+    path: '/pierwsza-wizyta',
     name: 'firstVisit',
     component: firstVisit
   },
   {
-    path: '/rezerwacja_wizyty',
+    path: '/rezerwacja-wizyty',
     name: 'reservation',
     component: reservation
   },
