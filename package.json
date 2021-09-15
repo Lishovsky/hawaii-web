@@ -1,5 +1,5 @@
 {
-  "name": "Hawaii-Katowice",
+  "name": "Hawaii-Katowice.pl",
   "version": "1.0.0",
   "private": true,
   "description": "Hawaii Katowice - Opalanie natryskowe",
@@ -56,6 +56,6 @@
   "readme": "ERROR: No README data found!",
   "repository": {
     "type": "git",
-    "url": "-"
+    "url": "https://github.com/Lishovsky/hawaii-web"
   }
 }
