@@ -1,7 +1,9 @@
 <template>
   <section class="sectionSix">
     <div class="sectionSix_bgColor">
-      <button>Zarezerwuj wizytę</button>
+      <router-link to="/rezerwacja-wizyty"
+        ><button>Zarezerwuj wizytę</button></router-link
+      >
     </div>
   </section>
 </template>
