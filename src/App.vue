@@ -2,8 +2,10 @@
   <div id="app">
     <navigation></navigation>
     <router-view />
-    <reserved ></reserved>
-    <contact id="contact"></contact>
+    <reserved></reserved>
+    <div id="contact"></div>
+    <contact></contact>
+
     <googleMaps></googleMaps>
     <footerComponent></footerComponent>
   </div>

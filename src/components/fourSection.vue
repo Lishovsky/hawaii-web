@@ -3,20 +3,20 @@
     <h2>Galeria zdjęć</h2>
     <div class="galery">
       <div class="galeryItem">
-        <img id="oneImg" src="../assets/img/gallery/1/1.jpeg" alt="opalanie" />
+        <img id="oneImg" src="../assets/img/gallery/1/1.webp" alt="opalanie" />
       </div>
       <div class="galeryItem">
-        <img id="twoImg" src="../assets/img/gallery/1/2.jpeg" alt="opalanie" />
+        <img id="twoImg" src="../assets/img/gallery/1/2.webp" alt="opalanie" />
       </div>
       <div class="galeryItem">
         <img
           id="threeImg"
-          src="../assets/img/gallery/1/3.jpeg"
+          src="../assets/img/gallery/1/3.webp"
           alt="opalanie"
         />
       </div>
       <div class="galeryItem">
-        <img id="fourImg" src="../assets/img/gallery/1/4.jpeg" alt="opalanie" />
+        <img id="fourImg" src="../assets/img/gallery/1/4.webp" alt="opalanie" />
       </div>
     </div>
     <div class="circle">
@@ -59,16 +59,16 @@ export default {
       setTimeout(function () {
         document
           .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/1.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/1.webp");
         document
           .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/2.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/2.webp");
         document
           .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/3.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/3.webp");
         document
           .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/4.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/4.webp");
       }, 500);
     },
 
@@ -98,16 +98,16 @@ export default {
       setTimeout(function () {
         document
           .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/5.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/5.webp");
         document
           .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/6.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/6.webp");
         document
           .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/7.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/7.webp");
         document
           .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/8.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/8.webp");
       }, 500);
     },
     threeGallery() {
@@ -134,16 +134,16 @@ export default {
 
         document
           .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/9.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/9.webp");
         document
           .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/10.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/10.webp");
         document
           .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/11.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/11.webp");
         document
           .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/12.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/12.webp");
       }, 500);
     },
     fourGallery() {
@@ -170,16 +170,16 @@ export default {
 
         document
           .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/13.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/13.webp");
         document
           .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/14.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/14.webp");
         document
           .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/15.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/15.webp");
         document
           .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/16.jpeg");
+          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/16.webp");
       }, 500);
     },
   },

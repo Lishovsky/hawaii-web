@@ -40,7 +40,7 @@ export default {
 .firstSection_left {
   grid-area: left;
   background: burlywood;
-  background-image: url("../assets/img/onesec.png");
+  background-image: url("../assets/img/onesec.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 10% 50%;
@@ -137,7 +137,7 @@ export default {
     max-width: 100vw;
     box-sizing: border-box;
     background: none;
-    background-image: url("../assets/img/onesec.png");
+    background-image: url("../assets/img/onesec.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10% 50%;

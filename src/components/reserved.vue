@@ -19,7 +19,7 @@ export default {
   width: 100%;
   box-sizing: border-box;
   height: 70vh;
-  background-image: url("../assets/img/reserved.png");
+  background-image: url("../assets/img/reserved.webp");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -72,7 +72,7 @@ export default {
     width: 100%;
     box-sizing: border-box;
     height: 70vh;
-    background-image: url("../assets/img/reserved.png");
+    background-image: url("../assets/img/reserved.webp");
     background-size: cover;
     background-attachment: scroll;
   }

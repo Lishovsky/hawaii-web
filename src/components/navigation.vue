@@ -20,7 +20,7 @@
         <router-link @click="hiddingMobileNav()" to="/rezerwacja-wizyty"
           >zarezerwuj wizytę</router-link
         >
-        <a @click="hiddingMobileNav()" href="#contact">Kontakt</a>
+        <a @click="scrollToElement()" href="#">Kontakt</a>
       </div>
     </nav>
 
@@ -36,7 +36,7 @@
         <router-link to="/pierwsza-wizyta">Pierwsza wizyta</router-link>
         <router-link to="/cennik">Cennik</router-link>
         <router-link to="/rezerwacja-wizyty">zarezerwuj wizytę</router-link>
-        <a href="#contact">Kontakt</a>
+        <a @click="scrollToElement()" href="#">Kontakt</a>
       </div>
       <div class="mobileNavToggler" @click="mobileNavActive()">
         <span></span>
@@ -93,6 +93,11 @@ export default {
       } else {
         fixedBar.style.transform = "translateY(-100%)";
       }
+    },
+    scrollToElement() {
+      const elementToScroll = document.querySelector("#contact");
+      const scrollValue = elementToScroll.offsetTop - 40;
+      window.scroll(0, scrollValue);
     },
   },
 };
