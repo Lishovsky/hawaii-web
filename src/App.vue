@@ -18,6 +18,15 @@ import contact from "./components/contact.vue";
 import googleMaps from "./components/googleMaps.vue";
 import footerComponent from "./components/footerComponent.vue";
 
+// import Vue from "vue";
+// import VueFbCustomerChat from "vue-fb-customer-chat";
+
+// Vue.use(VueFbCustomerChat, {
+//   page_id: "158302319668610", //  change 'null' to your Facebook Page ID,
+//   theme_color: "#cf9d75", // theme color in HEX
+//   locale: "en_US", // default 'en_US'
+// });
+
 export default {
   components: { navigation, reserved, contact, googleMaps, footerComponent },
 };

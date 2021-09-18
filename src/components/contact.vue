@@ -47,6 +47,7 @@ export default {
   padding: 15vh 5vw 15vh 10vw;
   box-sizing: border-box;
   text-align: center;
+  background: #fff;
 }
 
 .contact h2 {

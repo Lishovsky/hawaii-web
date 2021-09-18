@@ -56,6 +56,7 @@ export default {
   grid-template-areas: "left right";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
+  background: #fff;
 }
 
 .threeSection_Box:nth-child(1) {

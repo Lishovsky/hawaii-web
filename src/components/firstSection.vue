@@ -1,6 +1,7 @@
 <template>
   <section class="firstSection">
     <div class="firstSection_left"></div>
+    <div class="img"></div>
     <div class="firstSection_right">
       <div class="mainBox">
         <div class="mainBox_content">
@@ -120,6 +121,7 @@ export default {
     grid-template-areas: "left" "right";
     grid-template-rows: 0vh 100vh;
     grid-template-columns: 1fr;
+    background: none;
   }
 
   .firstSection_left {
@@ -137,10 +139,17 @@ export default {
     max-width: 100vw;
     box-sizing: border-box;
     background: none;
+    background-position: 10% 50%;
+  }
+
+  .img {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -2;
     background-image: url("../assets/img/onesec.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 10% 50%;
   }
 
   .firstSection_right .mainBox {

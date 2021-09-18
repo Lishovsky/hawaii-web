@@ -1,6 +1,7 @@
 <template>
   <section class="sectionSix">
     <div class="sectionSix_bgColor">
+      <!-- <div class="sectionSix_bgImage"></div> -->
       <router-link to="/rezerwacja-wizyty"
         ><button>Zarezerwuj wizytę</button></router-link
       >
@@ -72,9 +73,11 @@ export default {
     width: 100%;
     box-sizing: border-box;
     height: 70vh;
-    background-image: url("../assets/img/reserved.webp");
-    background-size: cover;
-    background-attachment: scroll;
+    position: relative;
+  }
+
+  .sectionSix .sectionSix_bgColor {
+    position: relative;
   }
 }
 

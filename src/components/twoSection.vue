@@ -28,6 +28,8 @@ export default {
   min-height: 70vh;
   box-sizing: border-box;
   background: rgb(230, 230, 230);
+  position: relative;
+  z-index: 2;
 }
 
 .twoSection_left {
@@ -103,6 +105,7 @@ export default {
     grid-area: left;
     background: rgb(255, 255, 255);
     display: flex;
+    z-index: 1;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
