@@ -44,7 +44,7 @@ export default {
 .contact {
   width: 100%;
   min-height: 40vh;
-  padding: 10vh 10vw;
+  padding: 15vh 5vw 15vh 10vw;
   box-sizing: border-box;
   text-align: center;
 }
@@ -120,7 +120,7 @@ export default {
 
 @media only screen and (max-width: 1291px) {
   .contact {
-    padding: 10vh 5vw;
+    padding: 16vh 5vw 16vh 5vw;
   }
   .contact .contactBox .contactBox_item .image {
     height: 70px;

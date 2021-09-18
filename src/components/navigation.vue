@@ -36,7 +36,7 @@
         <router-link to="/pierwsza-wizyta">Pierwsza wizyta</router-link>
         <router-link to="/cennik">Cennik</router-link>
         <router-link to="/rezerwacja-wizyty">zarezerwuj wizytę</router-link>
-        <a @click="scrollToElement()" href="#">Kontakt</a>
+        <a href="#contact">Kontakt</a>
       </div>
       <div class="mobileNavToggler" @click="mobileNavActive()">
         <span></span>
@@ -94,11 +94,11 @@ export default {
         fixedBar.style.transform = "translateY(-100%)";
       }
     },
-    scrollToElement() {
-      const elementToScroll = document.querySelector("#contact");
-      const scrollValue = elementToScroll.offsetTop - 40;
-      window.scroll(0, scrollValue);
-    },
+    // scrollToElement() {
+    //   const elementToScroll = document.querySelector("#contact");
+    //   const scrollValue = elementToScroll.offsetTop - 40;
+    //   window.scroll(0, scrollValue);
+    // },
   },
 };
 </script>

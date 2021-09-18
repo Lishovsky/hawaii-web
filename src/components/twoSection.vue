@@ -41,7 +41,7 @@ export default {
 .twoSection_right {
   grid-area: right;
   background: burlywood;
-  background-image: url("../assets/img/tosec.webp");
+  background-image: url("../assets/img/tosec.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 10% 50%;
