@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import tan from '../views/tan.vue'
-import reservation from '../views/reservation.vue'
 import firstVisit from '../views/firstVisit.vue'
 import priceList from '../views/priceList.vue'
 
@@ -23,11 +22,6 @@ const routes = [
     path: '/pierwsza-wizyta',
     name: 'firstVisit',
     component: firstVisit
-  },
-  {
-    path: '/rezerwacja-wizyty',
-    name: 'reservation',
-    component: reservation
   },
   {
     path: '/cennik',

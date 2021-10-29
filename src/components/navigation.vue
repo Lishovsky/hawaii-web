@@ -17,9 +17,7 @@
         <router-link @click="hiddingMobileNav()" to="/cennik"
           >Cennik</router-link
         >
-        <router-link @click="hiddingMobileNav()" to="/rezerwacja-wizyty"
-          >zarezerwuj wizytę</router-link
-        >
+        <a href="https://rezerwacje.hawaii-katowice.pl">Zarezerwuj wizytę</a>
         <a @click="scrollToElement()" href="#">Kontakt</a>
       </div>
     </nav>
@@ -35,7 +33,7 @@
         <router-link to="/opalanie-natryskowe">Opalanie natryskowe</router-link>
         <router-link to="/pierwsza-wizyta">Pierwsza wizyta</router-link>
         <router-link to="/cennik">Cennik</router-link>
-        <router-link to="/rezerwacja-wizyty">zarezerwuj wizytę</router-link>
+        <a href="https://rezerwacje.hawaii-katowice.pl">Zarezerwuj wizytę</a>
         <a href="#contact">Kontakt</a>
       </div>
       <div class="mobileNavToggler" @click="mobileNavActive()">

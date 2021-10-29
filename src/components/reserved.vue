@@ -2,8 +2,7 @@
   <section class="sectionSix">
     <div class="sectionSix_bgColor">
       <!-- <div class="sectionSix_bgImage"></div> -->
-      <router-link to="/rezerwacja-wizyty"
-        ><button>Zarezerwuj wizytę</button></router-link
+      <a href="https://rezerwacje.hawaii-katowice.pl"><button>Zarezerwuj wizytę</button></a>
       >
     </div>
   </section>

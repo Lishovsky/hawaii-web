@@ -20,10 +20,15 @@
       </div>
     </div>
     <div class="circle">
-      <div @click="firstGallery()" class="circleItem 1 activeCircle"></div>
+<!---      <div @click="firstGallery()" class="circleItem 1 activeCircle"></div>
       <div @click="twoGallery()" class="circleItem 2"></div>
       <div @click="threeGallery()" class="circleItem 3"></div>
-      <div @click="fourGallery()" class="circleItem 4"></div>
+      <div @click="fourGallery()" class="circleItem 4"></div> -->
+
+      <div @click="gallery()" class="circleItem activeCircle"></div>
+      <div @click="gallery()" class="circleItem"></div>
+      <div @click="gallery()" class="circleItem"></div>
+      <div @click="gallery()" class="circleItem"></div>
     </div>
   </section>
 </template>
@@ -32,69 +37,49 @@
 export default {
   name: "fourSection",
   methods: {
-    firstGallery() {
-      const circleOne = document.querySelector(".circleItem:nth-child(1)");
-      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
-      const circleThree = document.querySelector(".circleItem:nth-child(3)");
-      const circleFour = document.querySelector(".circleItem:nth-child(4)");
+    gallery() {
 
-      circleOne.classList.add("activeCircle");
-      circleTwo.classList.remove("activeCircle");
-      circleThree.classList.remove("activeCircle");
-      circleFour.classList.remove("activeCircle");
 
-      //Animation gallery
-      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
+      //navigation circles
+      const circles = document.querySelectorAll('.circleItem');
+      const ArrayOfCircles = Array.from(circles)
 
-      setTimeout(function () {
-        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-      }, 500);
+      this.classList.add("activeCircle");
 
-      setTimeout(function () {
-        document
-          .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/1.webp");
-        document
-          .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/2.webp");
-        document
-          .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/3.webp");
-        document
-          .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/4.webp");
-      }, 500);
-    },
+      for(let i = 0; i < ArrayOfCircles.lenght; i++) {
+            ArrayOfCircles[i].classList.remove("activeCircle");
+      }
 
-    twoGallery() {
-      const circleOne = document.querySelector(".circleItem:nth-child(1)");
-      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
-      const circleThree = document.querySelector(".circleItem:nth-child(3)");
-      const circleFour = document.querySelector(".circleItem:nth-child(4)");
-      circleOne.classList.remove("activeCircle");
-      circleTwo.classList.add("activeCircle");
-      circleThree.classList.remove("activeCircle");
-      circleFour.classList.remove("activeCircle");
+      //gallery box
 
-      //Animation gallery
-      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
+      const galleryItems = document.querySelectorAll('.galeryItem');
+      const arrayOfGalleryItems = Array.from(galleryItems);
 
-      setTimeout(function () {
-        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-      }, 500);
+      for(let i = 0; i < arrayOfGalleryItems.lenght; i++) {
+        arrayOfGalleryItems[i].style.opacity = "0";
+        setTimeout(() => {
+          arrayOfGalleryItems[i].style.opacity = "1";
+        }, 500);
+      }
 
+      if(ArrayOfCircles[0].classList.contains('activeCircle')){
+          setTimeout(function () {
+          document
+            .querySelector("#oneImg")
+            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/1.webp");
+          document
+            .querySelector("#twoImg")
+            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/2.webp");
+          document
+            .querySelector("#threeImg")
+            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/3.webp");
+          document
+            .querySelector("#fourImg")
+            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/4.webp");
+        }, 500);
+      }
+
+      else if(ArrayOfCircles[1].classList.contains('activeCircle')){
       setTimeout(function () {
         document
           .querySelector("#oneImg")
@@ -109,29 +94,10 @@ export default {
           .querySelector("#fourImg")
           .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/8.webp");
       }, 500);
-    },
-    threeGallery() {
-      const circleOne = document.querySelector(".circleItem:nth-child(1)");
-      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
-      const circleThree = document.querySelector(".circleItem:nth-child(3)");
-      const circleFour = document.querySelector(".circleItem:nth-child(4)");
-      circleOne.classList.remove("activeCircle");
-      circleTwo.classList.remove("activeCircle");
-      circleThree.classList.add("activeCircle");
-      circleFour.classList.remove("activeCircle");
+      }
 
-      //Animation gallery
-      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
-
-      setTimeout(function () {
-        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-
+      else if(ArrayOfCircles[2].classList.contains('activeCircle')){
+        setTimeout(function (){
         document
           .querySelector("#oneImg")
           .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/9.webp");
@@ -145,29 +111,10 @@ export default {
           .querySelector("#fourImg")
           .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/12.webp");
       }, 500);
-    },
-    fourGallery() {
-      const circleOne = document.querySelector(".circleItem:nth-child(1)");
-      const circleTwo = document.querySelector(".circleItem:nth-child(2)");
-      const circleThree = document.querySelector(".circleItem:nth-child(3)");
-      const circleFour = document.querySelector(".circleItem:nth-child(4)");
-      circleOne.classList.remove("activeCircle");
-      circleTwo.classList.remove("activeCircle");
-      circleThree.classList.remove("activeCircle");
-      circleFour.classList.add("activeCircle");
+      }
 
-      //Animation gallery
-      document.querySelector(".galeryItem:nth-child(1)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(2)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(3)").style.opacity = "0";
-      document.querySelector(".galeryItem:nth-child(4)").style.opacity = "0";
-
-      setTimeout(function () {
-        document.querySelector(".galeryItem:nth-child(1)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(2)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(3)").style.opacity = "1";
-        document.querySelector(".galeryItem:nth-child(4)").style.opacity = "1";
-
+      else if(ArrayOfCircles[3].classList.contains('activeCircle')){
+        setTimeout(function() {
         document
           .querySelector("#oneImg")
           .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/13.webp");
@@ -181,7 +128,8 @@ export default {
           .querySelector("#fourImg")
           .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/16.webp");
       }, 500);
-    },
+      }
+    }
   },
 };
 </script>
