@@ -3,32 +3,23 @@
     <h2>Galeria zdjęć</h2>
     <div class="galery">
       <div class="galeryItem">
-        <img id="oneImg" src="../assets/img/gallery/1/1.webp" alt="opalanie" />
+        <img src="../assets/img/gallery/1/1.webp" alt="opalanie" />
       </div>
       <div class="galeryItem">
-        <img id="twoImg" src="../assets/img/gallery/1/2.webp" alt="opalanie" />
+        <img src="../assets/img/gallery/1/2.webp" alt="opalanie" />
       </div>
       <div class="galeryItem">
-        <img
-          id="threeImg"
-          src="../assets/img/gallery/1/3.webp"
-          alt="opalanie"
-        />
+        <img src="../assets/img/gallery/1/3.webp" alt="opalanie" />
       </div>
       <div class="galeryItem">
-        <img id="fourImg" src="../assets/img/gallery/1/4.webp" alt="opalanie" />
+        <img src="../assets/img/gallery/1/4.webp" alt="opalanie" />
       </div>
     </div>
     <div class="circle">
-<!---      <div @click="firstGallery()" class="circleItem 1 activeCircle"></div>
-      <div @click="twoGallery()" class="circleItem 2"></div>
-      <div @click="threeGallery()" class="circleItem 3"></div>
-      <div @click="fourGallery()" class="circleItem 4"></div> -->
-
-      <div @click="gallery()" class="circleItem activeCircle"></div>
-      <div @click="gallery()" class="circleItem"></div>
-      <div @click="gallery()" class="circleItem"></div>
-      <div @click="gallery()" class="circleItem"></div>
+      <div @click="gallery($event)" class="circleItem activeCircle"></div>
+      <div @click="gallery($event)" class="circleItem"></div>
+      <div @click="gallery($event)" class="circleItem"></div>
+      <div @click="gallery($event)" class="circleItem"></div>
     </div>
   </section>
 </template>
@@ -37,99 +28,53 @@
 export default {
   name: "fourSection",
   methods: {
-    gallery() {
-
-
+    gallery(event) {
       //navigation circles
-      const circles = document.querySelectorAll('.circleItem');
-      const ArrayOfCircles = Array.from(circles)
+      const circles = document.querySelectorAll(".circleItem");
+      const ArrayOfCircles = Array.from(circles);
+      let numberOfGallery;
 
-      this.classList.add("activeCircle");
-
-      for(let i = 0; i < ArrayOfCircles.lenght; i++) {
-            ArrayOfCircles[i].classList.remove("activeCircle");
+      for (let i = 0; i < ArrayOfCircles.length; i++) {
+        ArrayOfCircles[i].classList.remove("activeCircle");
+        if (event.target == ArrayOfCircles[i]) {
+          numberOfGallery = i;
+        }
       }
 
-      //gallery box
+      event.target.classList.add("activeCircle");
 
-      const galleryItems = document.querySelectorAll('.galeryItem');
+      //animation
+      const galleryItems = document.querySelectorAll(".galeryItem");
       const arrayOfGalleryItems = Array.from(galleryItems);
 
-      for(let i = 0; i < arrayOfGalleryItems.lenght; i++) {
+      for (let i = 0; i < arrayOfGalleryItems.length; i++) {
         arrayOfGalleryItems[i].style.opacity = "0";
         setTimeout(() => {
           arrayOfGalleryItems[i].style.opacity = "1";
         }, 500);
       }
 
-      if(ArrayOfCircles[0].classList.contains('activeCircle')){
-          setTimeout(function () {
-          document
-            .querySelector("#oneImg")
-            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/1.webp");
-          document
-            .querySelector("#twoImg")
-            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/2.webp");
-          document
-            .querySelector("#threeImg")
-            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/3.webp");
-          document
-            .querySelector("#fourImg")
-            .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/4.webp");
-        }, 500);
-      }
+      //change sources
 
-      else if(ArrayOfCircles[1].classList.contains('activeCircle')){
-      setTimeout(function () {
-        document
-          .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/5.webp");
-        document
-          .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/6.webp");
-        document
-          .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/7.webp");
-        document
-          .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/8.webp");
-      }, 500);
-      }
+      const arrayWithSources = [
+        [1, 2, 3, 4],
+        [5, 6, 7, 8],
+        [9, 10, 11, 12],
+        [13, 14, 15, 16],
+      ];
 
-      else if(ArrayOfCircles[2].classList.contains('activeCircle')){
-        setTimeout(function (){
-        document
-          .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/9.webp");
-        document
-          .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/10.webp");
-        document
-          .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/11.webp");
-        document
-          .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/12.webp");
-      }, 500);
-      }
+      const galleryItemsIMG = document.querySelectorAll(".galeryItem img");
+      const arrayOfGalleryItemsIMG = Array.from(galleryItemsIMG);
 
-      else if(ArrayOfCircles[3].classList.contains('activeCircle')){
-        setTimeout(function() {
-        document
-          .querySelector("#oneImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/13.webp");
-        document
-          .querySelector("#twoImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/14.webp");
-        document
-          .querySelector("#threeImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/15.webp");
-        document
-          .querySelector("#fourImg")
-          .setAttribute("src", "https://hawaii-katowice.pl/gallery/1/16.webp");
-      }, 500);
+      for (let i = 0; i < arrayOfGalleryItemsIMG.length; i++) {
+        setTimeout(() => {
+          arrayOfGalleryItemsIMG[i].setAttribute(
+            "src",
+            `https://hawaii-katowice.pl/gallery/1/${arrayWithSources[numberOfGallery][i]}.webp`
+          );
+        }, 450);
       }
-    }
+    },
   },
 };
 </script>
